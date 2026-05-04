@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Type 2 Diabetes — Symptoms & Causes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream: #faf7f2;
+      --warm-white: #fff9f2;
+      --ink: #1a1410;
+      --ink-soft: #3d3228;
+      --ink-muted: #7a6a5a;
+      --accent: #b84a2e;
+      --accent-light: #e8c4b8;
+      --accent-pale: #fdf0ec;
+      --gold: #c8902a;
+      --gold-light: #f5e6c8;
+      --border: #e2d8cc;
+      --section-bg: #f4ede3;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--ink);
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 40px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .topbar span { opacity: 0.5; }
+    .topbar a { color: #fff; text-decoration: none; opacity: 0.85; }
+    .topbar a:hover { opacity: 1; text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--warm-white);
+      border-bottom: 2px solid var(--ink);
+      padding: 28px 40px 0;
+    }
+    .site-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .site-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    nav {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+    nav a {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 14px 20px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+    nav a:hover, nav a.active {
+      color: var(--ink);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      padding: 16px 40px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: var(--warm-white);
+    }
+    .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { opacity: 0.4; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 420px;
+      background: var(--ink);
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+      display: block;
+    }
+    /* SVG fallback illustration */
+    .hero-illustration {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #2a1a12 0%, #4a2a1a 40%, #1a0e08 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-illustration svg {
+      opacity: 0.18;
+      position: absolute;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px 60px;
+      background: linear-gradient(to top, rgba(20,10,5,0.85) 0%, rgba(20,10,5,0.2) 60%, transparent 100%);
+    }
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      max-width: 680px;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      max-width: 540px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    /* ── LAYOUT ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      padding: 48px 56px 48px 0;
+      border-right: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 40px;
+      background: var(--accent-light);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 36px 0 12px;
+    }
+
+    p {
+      color: var(--ink-soft);
+      margin-bottom: 18px;
+      font-weight: 300;
+    }
+
+    .intro-text {
+      font-size: 20px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      font-weight: 300;
+      font-style: italic;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 36px 0;
+    }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      margin: 40px 0;
+      padding: 28px 32px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-pale);
+      border-radius: 0 6px 6px 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── SYMPTOM GRID ── */
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .symptom-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .symptom-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 17px;
+    }
+    .symptom-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .symptom-card p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ── RISK FACTOR LIST ── */
+    .risk-list {
+      list-style: none;
+      margin: 16px 0 28px;
+    }
+    .risk-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 16px;
+      color: var(--ink-soft);
+    }
+    .risk-list li:last-child { border-bottom: none; }
+    .risk-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── INFO BOX ── */
+    .info-box {
+      background: var(--gold-light);
+      border: 1px solid #dfc080;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+    .info-box-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-box p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* ── WARNING BOX ── */
+    .warning-box {
+      background: #fff5f3;
+      border: 1px solid var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 22px 26px;
+      margin: 28px 0;
+    }
+    .warning-box-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .warning-box p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* ── DATA VISUAL ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--section-bg);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    /* ── MECHANISM FLOW ── */
+    .mechanism {
+      background: var(--ink);
+      border-radius: 10px;
+      padding: 32px;
+      margin: 32px 0;
+      color: #fff;
+    }
+    .mechanism-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    .flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .flow-step {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+    }
+    .flow-bubble {
+      width: 64px;
+      height: 64px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-size: 22px;
+    }
+    .flow-step h5 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 4px;
+    }
+    .flow-step p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      margin: 0;
+      line-height: 1.4;
+    }
+    .flow-arrow {
+      color: rgba(255,255,255,0.25);
+      font-size: 22px;
+      padding: 0 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── COMPLICATIONS TABLE ── */
+    .complications {
+      margin: 24px 0;
+    }
+    .complication-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .complication-item:first-child { border-top: 1px solid var(--border); }
+    .comp-organ {
+      padding: 16px;
+      background: var(--section-bg);
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .comp-detail {
+      padding: 16px;
+      font-size: 15px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* ── SIDEBAR ── */
+    aside {
+      padding: 48px 0 48px 36px;
+    }
+
+    .sidebar-widget {
+      margin-bottom: 32px;
+    }
+    .widget-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .quick-facts li {
+      list-style: none;
+      font-size: 14px;
+      color: var(--ink-soft);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+    }
+    .quick-facts li strong {
+      color: var(--ink);
+      min-width: 90px;
+      display: inline-block;
+    }
+
+    .related-link {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    .related-link:hover { color: var(--accent); }
+    .related-link::before {
+      content: '→ ';
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .a1c-scale {
+      margin-top: 12px;
+    }
+    .a1c-bar {
+      height: 14px;
+      border-radius: 7px;
+      background: linear-gradient(to right, #5aad6b 0%, #e8c840 45%, #e87040 75%, #c83020 100%);
+      position: relative;
+      margin-bottom: 8px;
+    }
+    .a1c-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+    }
+    .a1c-item {
+      font-size: 13px;
+      color: var(--ink-soft);
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .a1c-item strong { color: var(--ink); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.6);
+      padding: 40px;
+      font-size: 13px;
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+    footer strong { color: rgba(255,255,255,0.9); display: block; margin-bottom: 6px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto 32px;
+    }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 11px;
+      opacity: 0.45;
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; padding: 0 20px; }
+      main { padding: 32px 0; border-right: none; }
+      aside { padding: 0 0 32px; }
+      .symptom-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 36px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .flow { gap: 8px; }
+      .complication-item { grid-template-columns: 1fr; }
+      .comp-organ { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <a href="#">Patient Care & Health Info</a>
+    <span>|</span>
+    <a href="#">Departments & Centers</a>
+    <span>|</span>
+    <a href="#">Research</a>
+    <span>|</span>
+    <a href="#">Education</a>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="site-name">Health Library</div>
+    <div class="site-title">Diseases & Conditions</div>
+    <nav>
+      <a href="#overview" class="active">Overview</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#causes">Causes</a>
+      <a href="#risk">Risk Factors</a>
+      <a href="#complications">Complications</a>
+      <a href="#diagnosis">Diagnosis & Treatment</a>
+      <a href="#prevention">Prevention</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="#">Home</a> <span>›</span>
+    <a href="#">Patient Care & Health Info</a> <span>›</span>
+    <a href="#">Diseases & Conditions</a> <span>›</span>
+    <span style="color:var(--ink)">Type 2 Diabetes</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-illustration">
+      <!-- Decorative SVG: blood glucose / cells motif -->
+      <svg width="380" height="380" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="190" r="160" stroke="white" stroke-width="1.5"/>
+        <circle cx="190" cy="190" r="110" stroke="white" stroke-width="1"/>
+        <circle cx="190" cy="190" r="60" stroke="white" stroke-width="0.75"/>
+        <circle cx="190" cy="90" r="18" fill="white"/>
+        <circle cx="265" cy="140" r="12" fill="white"/>
+        <circle cx="265" cy="240" r="20" fill="white"/>
+        <circle cx="190" cy="290" r="14" fill="white"/>
+        <circle cx="115" cy="240" r="10" fill="white"/>
+        <circle cx="115" cy="140" r="16" fill="white"/>
+        <line x1="190" y1="108" x2="254" y2="148" stroke="white" stroke-width="0.75"/>
+        <line x1="265" y1="152" x2="265" y2="220" stroke="white" stroke-width="0.75"/>
+        <line x1="254" y1="248" x2="204" y2="280" stroke="white" stroke-width="0.75"/>
+        <line x1="176" y1="280" x2="129" y2="250" stroke="white" stroke-width="0.75"/>
+        <line x1="115" y1="230" x2="115" y2="156" stroke="white" stroke-width="0.75"/>
+        <line x1="126" y1="132" x2="172" y2="104" stroke="white" stroke-width="0.75"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">Endocrine System · Metabolic Disorder</div>
+      <h1 class="hero">Type 2 Diabetes</h1>
+      <p class="hero-subtitle">A chronic condition affecting how your body regulates and uses sugar as fuel — and one of the most manageable diseases of our time.</p>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="layout">
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <div class="section-label">Overview</div>
+        <h2>What is Type 2 Diabetes?</h2>
+        <p class="intro-text">Type 2 diabetes is a long-term condition in which the body fails to use insulin properly, leading to elevated blood sugar levels that, over time, can damage many organ systems throughout the body.</p>
+
+        <p>With type 2 diabetes, the body either doesn't produce enough insulin or the cells don't respond to insulin normally — a phenomenon called insulin resistance. Insulin is a hormone made by the pancreas that acts like a key, allowing blood sugar to enter cells and be used as energy. When that process breaks down, sugar accumulates in the bloodstream instead.</p>
+
+        <p>Unlike type 1 diabetes, which is an autoimmune condition appearing mostly in childhood, type 2 diabetes typically develops in adults and is strongly linked to lifestyle factors — particularly excess weight, physical inactivity, and poor diet. However, it is not exclusively a lifestyle disease; genetics and other biological factors play significant roles.</p>
+
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-number">537M</div>
+            <div class="stat-label">Adults living with diabetes worldwide (IDF, 2021)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">90–95%</div>
+            <div class="stat-label">Of all diabetes cases are type 2</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1 in 3</div>
+            <div class="stat-label">American adults has prediabetes</div>
+          </div>
+        </div>
+
+        <p>The encouraging news is that type 2 diabetes is one of the most preventable and manageable chronic diseases. For many people, meaningful lifestyle changes — losing modest amounts of weight, becoming more physically active, and improving dietary habits — can significantly lower blood sugar levels, sometimes to near-normal ranges.</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- HOW IT WORKS -->
+      <section id="mechanism">
+        <div class="section-label">The Science</div>
+        <h2>How Blood Sugar Goes Wrong</h2>
+        <p>Understanding type 2 diabetes starts with understanding how healthy glucose metabolism works — and where it breaks down.</p>
+
+        <div class="mechanism">
+          <div class="mechanism-title">The Insulin-Glucose Pathway</div>
+          <div class="flow">
+            <div class="flow-step">
+              <div class="flow-bubble">🍽️</div>
+              <h5>You Eat</h5>
+              <p>Carbohydrates break down into glucose in the digestive tract</p>
+            </div>
+            <div class="flow-arrow">›</div>
+            <div class="flow-step">
+              <div class="flow-bubble">🩸</div>
+              <h5>Blood Sugar Rises</h5>
+              <p>Glucose enters the bloodstream, signaling the pancreas</p>
+            </div>
+            <div class="flow-arrow">›</div>
+            <div class="flow-step">
+              <div class="flow-bubble">🔑</div>
+              <h5>Insulin Released</h5>
+              <p>Beta cells in the pancreas secrete insulin in response</p>
+            </div>
+            <div class="flow-arrow">›</div>
+            <div class="flow-step">
+              <div class="flow-bubble">⚡</div>
+              <h5>Cells Absorb Glucose</h5>
+              <p>Insulin "unlocks" cells to absorb glucose for energy or storage</p>
+            </div>
+          </div>
+        </div>
+
+        <p>In type 2 diabetes, cells — particularly in muscle, fat, and the liver — become resistant to insulin's signal. The pancreas compensates by producing more and more insulin, but over time the beta cells become exhausted and can no longer keep up with demand. The result: blood sugar stays chronically elevated.</p>
+
+        <div class="pull-quote">
+          <p>"Type 2 diabetes doesn't develop overnight. It typically progresses through years of prediabetes, during which intervention can prevent or delay the full condition from developing."</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- SYMPTOMS -->
+      <section id="symptoms">
+        <div class="section-label">Symptoms</div>
+        <h2>Recognizing the Signs</h2>
+        <p>One of the challenges with type 2 diabetes is that it often develops slowly — and in many people, symptoms are subtle or absent entirely in the early stages. The condition may go undiagnosed for years.</p>
+
+        <div class="symptom-grid">
+          <div class="symptom-card">
+            <div class="symptom-icon">💧</div>
+            <div>
+              <h4>Increased Thirst</h4>
+              <p>Excess blood sugar pulls fluid from tissues, leaving you dehydrated and constantly thirsty.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">🚽</div>
+            <div>
+              <h4>Frequent Urination</h4>
+              <p>The kidneys work overtime to filter excess glucose, pulling more water and increasing urination.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">😴</div>
+            <div>
+              <h4>Fatigue</h4>
+              <p>Without efficient glucose uptake into cells, energy levels drop. The body is starved of fuel despite high blood sugar.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">👀</div>
+            <div>
+              <h4>Blurred Vision</h4>
+              <p>Elevated glucose causes fluid shifts in the eye's lens, temporarily affecting its ability to focus.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">🩹</div>
+            <div>
+              <h4>Slow-Healing Sores</h4>
+              <p>High blood sugar impairs circulation and the immune response, slowing wound repair significantly.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">🤚</div>
+            <div>
+              <h4>Numbness or Tingling</h4>
+              <p>Nerve damage from prolonged high blood sugar can cause sensations of numbness, tingling, or pain, especially in hands and feet.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">🦠</div>
+            <div>
+              <h4>Frequent Infections</h4>
+              <p>Elevated glucose impairs white blood cell function, making infections — particularly of the skin, gums, and urinary tract — more frequent.</p>
+            </div>
+          </div>
+          <div class="symptom-card">
+            <div class="symptom-icon">🍽️</div>
+            <div>
+              <h4>Increased Hunger</h4>
+              <p>When cells can't absorb glucose effectively, they signal the brain that more fuel is needed — even after eating.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <div class="warning-box-title">⚠ When to See a Doctor</div>
+          <p>If you notice several of these symptoms, or if you have risk factors for diabetes (see below), schedule a blood test. Many people are diagnosed only during routine checkups — don't wait for symptoms to become severe.</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CAUSES -->
+      <section id="causes">
+        <div class="section-label">Causes</div>
+        <h2>Why Type 2 Diabetes Develops</h2>
+        <p>Type 2 diabetes results from a combination of genetic susceptibility and environmental or lifestyle factors. No single cause accounts for the condition in everyone.</p>
+
+        <h3>Insulin Resistance</h3>
+        <p>In most cases of type 2 diabetes, the cells of the muscles, fat, and liver become less sensitive to insulin. Exactly why this happens is not entirely understood, but excess body fat — especially fat stored around the abdomen — is one of the strongest drivers. Fat tissue, particularly visceral fat, releases inflammatory substances and fatty acids that interfere with insulin signaling pathways in cells.</p>
+
+        <h3>Pancreatic Beta Cell Decline</h3>
+        <p>As insulin resistance worsens, the pancreas compensates by releasing more insulin. Over time, this chronic overwork damages beta cells, reducing their ability to produce adequate insulin. When beta cell dysfunction combines with peripheral insulin resistance, blood glucose rises beyond what the body can control.</p>
+
+        <h3>Genetic Factors</h3>
+        <p>Family history significantly increases risk. Researchers have identified dozens of genetic variants that affect insulin secretion, glucose metabolism, and fat storage. If a parent or sibling has type 2 diabetes, your risk roughly doubles. However, having the genes doesn't guarantee the condition — lifestyle factors determine whether genetic susceptibility becomes clinical disease.</p>
+
+        <div class="info-box">
+          <div class="info-box-title">📌 Prediabetes: The Warning Stage</div>
+          <p>Prediabetes means blood sugar is elevated — but not yet high enough to be classified as type 2 diabetes. Without intervention, many people with prediabetes go on to develop type 2 diabetes within a decade. Prediabetes itself carries risks and is reversible with lifestyle change.</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- RISK FACTORS -->
+      <section id="risk">
+        <div class="section-label">Risk Factors</div>
+        <h2>Who Is at Greater Risk?</h2>
+        <p>Several factors increase the likelihood of developing type 2 diabetes. Identifying these early creates the opportunity for prevention.</p>
+
+        <ul class="risk-list">
+          <li><div class="risk-dot"></div><div><strong>Excess weight or obesity</strong> — Fat tissue, especially abdominal fat, promotes insulin resistance. It is the single most modifiable risk factor.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Physical inactivity</strong> — Exercise helps cells use insulin efficiently and aids weight management. Sedentary people are at substantially higher risk.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Family history</strong> — Having a first-degree relative with type 2 diabetes significantly raises personal risk.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Age 45 or older</strong> — Risk increases with age, partly due to reduced physical activity, muscle mass loss, and weight gain over time.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Race and ethnicity</strong> — People of African American, Hispanic, Native American, Asian American, or Pacific Islander descent face higher risk, though the reasons are multifactorial.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Prediabetes</strong> — Blood sugar consistently above normal but below diabetic thresholds indicates impaired glucose metabolism already underway.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Gestational diabetes history</strong> — Women who developed diabetes during pregnancy have a markedly elevated lifetime risk of type 2 diabetes.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Polycystic ovary syndrome (PCOS)</strong> — PCOS is associated with insulin resistance and raises type 2 diabetes risk in women.</div></li>
+          <li><div class="risk-dot"></div><div><strong>High blood pressure</strong> — Hypertension and type 2 diabetes frequently co-occur and share risk factors.</div></li>
+          <li><div class="risk-dot"></div><div><strong>Abnormal cholesterol or triglycerides</strong> — Low HDL ("good") cholesterol and high triglycerides are associated with increased risk.</div></li>
+        </ul>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- COMPLICATIONS -->
+      <section id="complications">
+        <div class="section-label">Complications</div>
+        <h2>Long-Term Effects of Uncontrolled Blood Sugar</h2>
+        <p>Persistently high blood glucose damages blood vessels and nerves throughout the body. The longer diabetes goes poorly controlled, the greater the cumulative damage to virtually every organ system.</p>
+
+        <div class="complications">
+          <div class="complication-item">
+            <div class="comp-organ">❤️ Heart & Blood Vessels</div>
+            <div class="comp-detail">Type 2 diabetes dramatically increases the risk of cardiovascular disease — including coronary artery disease, heart attack, stroke, and peripheral artery disease. It is the leading cause of cardiovascular death among people with diabetes.</div>
+          </div>
+          <div class="complication-item">
+            <div class="comp-organ">🫘 Kidneys</div>
+            <div class="comp-detail">Diabetic nephropathy is the leading cause of chronic kidney disease and end-stage renal failure in developed countries. The kidneys' delicate filtering vessels are damaged by years of elevated glucose.</div>
+          </div>
+          <div class="complication-item">
+            <div class="comp-organ">👁️ Eyes</div>
+            <div class="comp-detail">Diabetic retinopathy damages the blood vessels of the retina and is the leading cause of new blindness in working-age adults. Cataracts and glaucoma also occur at higher rates in people with diabetes.</div>
+          </div>
+          <div class="complication-item">
+            <div class="comp-organ">🦶 Nerves</div>
+            <div class="comp-detail">Diabetic neuropathy — nerve damage — typically starts in the feet and lower legs. Symptoms include numbness, tingling, burning, and loss of sensation. Severe neuropathy can lead to foot ulcers and, in some cases, amputation.</div>
+          </div>
+          <div class="complication-item">
+            <div class="comp-organ">🦶 Feet</div>
+            <div class="comp-detail">Poor circulation and impaired sensation in the feet make wounds and infections difficult to detect and heal. Minor injuries can escalate into serious infections requiring hospitalization or surgical intervention.</div>
+          </div>
+          <div class="complication-item">
+            <div class="comp-organ">🧠 Brain</div>
+            <div class="comp-detail">Research links type 2 diabetes with elevated risk of Alzheimer's disease and other forms of dementia. Chronic hyperglycemia and associated vascular changes may accelerate cognitive decline.</div>
+          </div>
+          <div class="complication-item">
+            <div class="comp-organ">🦷 Oral Health</div>
+            <div class="comp-detail">Diabetes impairs the immune response in gum tissue, raising the risk of gum disease (periodontitis). Conversely, severe gum disease can worsen blood sugar control — a bidirectional relationship.</div>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <p>"Most long-term complications of type 2 diabetes are preventable or significantly delayed with good blood sugar control — making early, consistent management one of the highest-value health decisions a person can make."</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- PREVENTION -->
+      <section id="prevention">
+        <div class="section-label">Prevention</div>
+        <h2>Reducing Your Risk</h2>
+        <p>For people with prediabetes or risk factors, lifestyle changes are proven to prevent or delay the onset of type 2 diabetes — often more effectively than medication alone.</p>
+
+        <h3>Weight Loss</h3>
+        <p>Losing even a modest amount of weight — as little as 5 to 7 percent of body weight — has been shown in large clinical trials to significantly reduce the progression from prediabetes to type 2 diabetes. The effect is largely mediated by improvements in insulin sensitivity.</p>
+
+        <h3>Physical Activity</h3>
+        <p>Regular exercise improves insulin sensitivity independent of weight loss. Both aerobic exercise (such as brisk walking, cycling, or swimming) and resistance training are beneficial. Current guidelines recommend at least 150 minutes of moderate-intensity activity per week, spread over several days.</p>
+
+        <h3>Dietary Patterns</h3>
+        <p>No single "diabetes diet" works for everyone, but general principles include: emphasizing whole, fiber-rich foods; reducing refined carbohydrates and sugary beverages; choosing healthy fats; and eating appropriate portion sizes. Dietary fiber in particular slows glucose absorption and improves blood sugar response.</p>
+
+        <h3>Avoiding Tobacco</h3>
+        <p>Smokers are significantly more likely to develop type 2 diabetes than non-smokers. Smoking promotes inflammation, worsens insulin resistance, and contributes to abdominal fat accumulation — all established risk factors.</p>
+
+        <div class="info-box">
+          <div class="info-box-title">📋 Screening Recommendations</div>
+          <p>The American Diabetes Association recommends screening for type 2 diabetes for all adults starting at age 35, or at any age in people who are overweight or obese and have one or more additional risk factors. Screening is a simple fasting blood glucose or HbA1c test.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">Quick Facts</div>
+        <ul class="quick-facts">
+          <li><strong>Type:</strong> Metabolic / Endocrine</li>
+          <li><strong>Onset:</strong> Usually gradual, adult onset</li>
+          <li><strong>Cause:</strong> Insulin resistance + beta cell decline</li>
+          <li><strong>Reversible?</strong> Partially — remission is possible</li>
+          <li><strong>Hereditary:</strong> Strong genetic component</li>
+          <li><strong>Curable?</strong> No, but manageable</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">HbA1c Reference</div>
+        <div class="a1c-scale">
+          <div class="a1c-bar"></div>
+          <div class="a1c-labels"><span>5%</span><span>6%</span><span>7%</span><span>8%</span><span>9%+</span></div>
+        </div>
+        <div style="margin-top:14px">
+          <div class="a1c-item"><span>Normal</span><strong>Below 5.7%</strong></div>
+          <div class="a1c-item"><span>Prediabetes</span><strong>5.7–6.4%</strong></div>
+          <div class="a1c-item"><span>Diabetes</span><strong>6.5% or higher</strong></div>
+          <div class="a1c-item"><span>Well-controlled</span><strong>Below 7%</strong></div>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">Related Conditions</div>
+        <a href="#" class="related-link">Type 1 Diabetes</a>
+        <a href="#" class="related-link">Prediabetes</a>
+        <a href="#" class="related-link">Gestational Diabetes</a>
+        <a href="#" class="related-link">Metabolic Syndrome</a>
+        <a href="#" class="related-link">Diabetic Neuropathy</a>
+        <a href="#" class="related-link">Diabetic Retinopathy</a>
+        <a href="#" class="related-link">Chronic Kidney Disease</a>
+        <a href="#" class="related-link">Insulin Resistance</a>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">Blood Sugar Targets</div>
+        <p style="font-size:13px;color:var(--ink-muted);margin-bottom:10px">General targets for most adults with type 2 diabetes (individual goals may vary):</p>
+        <div class="a1c-item"><span style="font-size:13px">Fasting glucose</span><strong style="font-size:13px">80–130 mg/dL</strong></div>
+        <div class="a1c-item"><span style="font-size:13px">Post-meal (2hr)</span><strong style="font-size:13px">&lt;180 mg/dL</strong></div>
+        <div class="a1c-item"><span style="font-size:13px">HbA1c</span><strong style="font-size:13px">&lt;7%</strong></div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <strong>About This Article</strong>
+        This content is provided for general educational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional regarding any questions you have about your health or a medical condition. Do not disregard professional medical advice or delay seeking it because of something you have read here.
+      </div>
+      <div>
+        <strong>Key References</strong>
+        American Diabetes Association<br>
+        International Diabetes Federation<br>
+        National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)<br>
+        World Health Organization (WHO)
+      </div>
+      <div>
+        <strong>Reviewed By</strong>
+        This article reflects current clinical guidelines and medical consensus. Information is reviewed periodically and updated to reflect advances in diabetes research and management.
+        <div style="margin-top:12px">Last reviewed: 2025</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Health Library Reference · Educational content only · Not a substitute for professional medical advice, diagnosis, or treatment.
+    </div>
+  </footer>
+
+</body>
+</html>
