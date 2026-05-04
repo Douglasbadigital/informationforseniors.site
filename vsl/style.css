@@ -94,7 +94,7 @@ body { font-family: 'Poppins', sans-serif; color: #000; background-color: #f9f9f
     100% { transform: scale(1); }
 }
 
-#card-6-bottles .btn-buy {
+#card-6-bottles .btn-buy img {
     animation: pulse-btn 1.8s ease-in-out infinite;
     transform-origin: center;
 }
