@@ -7,7 +7,7 @@ const CONFIG = {
     // Exemplo: "34:00" = 34 minutos | "00:30" = 30 segundos (para testes)
     // Nota: 3 segundos extras são adicionados automaticamente como
     // compensação pelo tempo médio até o lead dar play no vídeo
-    tempoDeDelay: "00:12",
+    tempoDeDelay: "30:35",
 
     // 🔗 Links de Checkout dos Botões (GLPatches)
     linkPote2: "https://magazinetype2.online/b?p=GLPPT2V1&b=132&fid=472&fnid=2&pfnid=1&pg=8395&aff_id=216367&subid={subid}",
