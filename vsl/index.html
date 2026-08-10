@@ -41,6 +41,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Preload do banner superior para evitar flash/salto de layout -->
+    <link rel="preload" as="image" href="https://raw.githubusercontent.com/Douglasbadigital/informationforseniors.site/refs/heads/main/potes/Youtube.PNG">
+
     <style>
         /* Cards ocultos por padrão via opacity
            O script.js revela com opacity:1 no momento do delay */
@@ -52,6 +55,13 @@
     </style>
 </head>
 <body>
+
+    <!-- BANNER SUPERIOR FIXO -->
+    <!-- Fica sempre visível no topo, mesmo com scroll. Altura calculada
+         automaticamente via JS (script.js) para funcionar em qualquer tela. -->
+    <div id="top-banner" class="top-banner">
+        <img id="top-banner-img" src="images/top-banner.png" alt="Header" width="1193" height="205">
+    </div>
 
     <div class="container">
 
