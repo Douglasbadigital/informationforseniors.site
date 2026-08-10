@@ -6,6 +6,41 @@ body { font-family: 'Poppins', sans-serif; color: #000; background-color: #f9f9f
 .container { max-width: 1080px; margin: 0 auto; padding: 0 15px; }
 
 /* =========================================
+    BANNER SUPERIOR (FIXO / PERMANENTE)
+    ========================================= */
+/* Fica preso no topo o tempo todo, inclusive durante o scroll.
+   A largura acompanha 100% da tela e a altura é sempre proporcional
+   (imagem responsiva) — o script.js mede a altura real renderizada
+   e empurra o conteúdo da página pra baixo, então funciona igual em
+   mobile, tablet e desktop sem precisar de breakpoints manuais. */
+.top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    line-height: 0;
+    background-color: #000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.top-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Espaço reservado no topo do body para o conteúdo não ficar
+   escondido atrás do banner fixo. O valor exato (--banner-height)
+   é calculado dinamicamente pelo script.js. Este valor aqui é só
+   um fallback antes do JS calcular. */
+body {
+    padding-top: 60px;
+    padding-top: var(--banner-height, 60px);
+    transition: padding-top 0.2s ease;
+}
+
+/* =========================================
     VSL E CONTADOR
     ========================================= */
 .vsl-wrapper { text-align: center; margin-top: 20px; }
