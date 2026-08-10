@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(() => {
         const imagens = [
-            "https://raw.githubusercontent.com/Douglasbadigital/informationforseniors.site/refs/heads/main/vsl/images/2-bottles.png",
-            "https://raw.githubusercontent.com/Douglasbadigital/informationforseniors.site/refs/heads/main/vsl/images/6-bottles.png",
-            "https://raw.githubusercontent.com/Douglasbadigital/informationforseniors.site/refs/heads/main/vsl/images/3-bottles.png",
+            "https://raw.githubusercontent.com/Douglasbadigital/primeage.site/refs/heads/main/vsl/images/2-bottles.png",
+            "https://raw.githubusercontent.com/Douglasbadigital/primeage.site/refs/heads/main/vsl/images/6-bottles.png",
+            "https://raw.githubusercontent.com/Douglasbadigital/primeage.site/refs/heads/main/vsl/images/3-bottles.png",
             "https://cdn.elasticfunnels.io/123/assets/media/Group 507.png",
             "https://cdn.elasticfunnels.io/123/assets/media/MBP_BUTTON_1.png",
             "https://elasticfunnels-cdn.b-cdn.net/111/assets/cards.avif",
@@ -172,37 +172,5 @@ document.addEventListener("DOMContentLoaded", function() {
             showNotification();
             startRandomInterval();
         }, 2000);
-    }
-
-
-    // 9. BANNER SUPERIOR FIXO — AJUSTE AUTOMÁTICO DE ALTURA
-    // Mede a altura real do banner renderizado (que varia com a largura
-    // da tela, pois a imagem é responsiva) e empurra o conteúdo da página
-    // pra baixo na mesma medida, via variável CSS. Isso garante que o
-    // banner nunca sobreponha o vídeo/conteúdo em nenhum dispositivo,
-    // sem precisar de valores fixos por breakpoint.
-    const topBanner = document.getElementById('top-banner');
-    const topBannerImg = document.getElementById('top-banner-img');
-
-    function ajustarEspacoBanner() {
-        if (!topBanner) return;
-        const altura = topBanner.offsetHeight;
-        document.documentElement.style.setProperty('--banner-height', altura + 'px');
-    }
-
-    if (topBanner && topBannerImg) {
-        // Ajusta assim que a imagem terminar de carregar (garante medida correta)
-        if (topBannerImg.complete) {
-            ajustarEspacoBanner();
-        } else {
-            topBannerImg.addEventListener('load', ajustarEspacoBanner);
-        }
-
-        // Reajusta em resize e mudança de orientação (mobile)
-        window.addEventListener('resize', ajustarEspacoBanner);
-        window.addEventListener('orientationchange', ajustarEspacoBanner);
-
-        // Fallback: garante o ajuste após o load completo da página
-        window.addEventListener('load', ajustarEspacoBanner);
     }
 });
